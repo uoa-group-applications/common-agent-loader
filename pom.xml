@@ -12,14 +12,14 @@
 	<packaging>jar</packaging>
 
 	<name>common-agent-loader</name>
-	<version>1.6</version>
+	<version>1.7-SNAPSHOT</version>
 	<description>Allows dynamic loading of agents. Stolen from JMockIt.</description>
 
 	<scm>
 		<url>https://github.com/uoa-group-applications/common-agent-loader</url>
 		<connection>scm:git:https://github.com/uoa-group-applications/common-agent-loader.git</connection>
 		<developerConnection>scm:git:git@github.com:uoa-group-applications/common-agent-loader.git</developerConnection>
-	  <tag>common-agent-loader-1.6</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<dependencies>
