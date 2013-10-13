@@ -133,6 +133,15 @@ public class AgentLoader {
     log.error("Unable to find agent with partial: {}", partial);
   }
 
+	/**
+	 * This method takes the jar:file:path-to-filename.war!/WEB-INF/jar/jar-file/ offset that is included in the
+	 * url classpath and extracts out a single jar containing the files in that match that url.
+	 *
+	 *
+	 * @param path - full url entry in the classpath
+	 * @param partial - the name of the partial we are trying to match
+	 * @return It returns null if it fails or a full path to the jar file if it succeeds
+	 */
 	public static String extractJar(URL path, String partial) {
 		String fullPath = null;
 
@@ -207,7 +216,6 @@ public class AgentLoader {
         return new LinuxVirtualMachine(ATTACH_PROVIDER, pid);
       } else if (osName.startsWith("Mac OS X")) {
         return new BsdVirtualMachine(ATTACH_PROVIDER, pid);
-//	      return null;
       } else if (osName.startsWith("Solaris")) {
         return new SolarisVirtualMachine(ATTACH_PROVIDER, pid);
       }
